@@ -4,10 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/question_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TESTING"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
     <ScrollView
+        android:id="@+id/scroll_field"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/buttons_layout">
+        android:layout_above="@+id/buttons_layout"
+        android:layout_below="@id/question_num"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,7 +32,7 @@
                 android:id="@+id/question_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="TESTING"
                 android:textSize="30sp"
@@ -31,7 +44,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text=" "
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -44,7 +56,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:gravity="center">
 
         <Button
@@ -54,7 +66,8 @@
             android:onClick="onClick"
             android:text="Show Answer"
             android:textAllCaps="false"
-            android:textSize="40sp" />
+            android:textSize="24sp"
+            android:layout_weight="1"/>
 
         <Button
             android:id="@+id/show_nextq_button"
@@ -63,6 +76,7 @@
             android:onClick="onClick"
             android:text="Next Question"
             android:textAllCaps="false"
-            android:textSize="40sp" />
+            android:textSize="24sp"
+            android:layout_weight="1"/>
     </LinearLayout>
 </RelativeLayout>
